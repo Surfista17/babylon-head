@@ -53,7 +53,8 @@ body, html {
   animation: crawlUp 60s linear infinite;
 }
 
-@keyframes crawlUp {
-  from { bottom: -500px; }
-  to { bottom: 100%; }
+.crawl {
+  ...
+  animation: crawlUp 180s linear infinite;
 }
+
