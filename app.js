@@ -49,8 +49,7 @@ While the Congress of the Republic endlessly debates this alarming chain of even
     // Carica modello testa 3D glTF (scegli un modello semplice o il tuo file)
     // Se hai un file .glb chiamalo 'head.glb' e mettilo nella root
     // Per test rapido uso modello demo
-    await BABYLON.SceneLoader.ImportMeshAsync(null, "https://models.babylonjs.com/", "BoomBox.glb", scene)
-      .then(result => {
+    BABYLON.SceneLoader.Append("", "head.glb", scene, function(scene) {
         headMesh = result.meshes[0];
         headMesh.position = new BABYLON.Vector3(0, 0, 0);
         headMesh.scaling = new BABYLON.Vector3(3, 3, 3);
