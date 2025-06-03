@@ -1,72 +1,80 @@
-body, html {
+/* Base */
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   overflow: hidden;
+  background-color: black;
   font-family: 'Orbitron', sans-serif;
-  background: black;
   color: yellow;
 }
 
+/* Babylon.js canvas */
 #renderCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-#starfield {
-  background: url('https://i.ibb.co/hfBtcP6/starfield.jpg') repeat;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  animation: starScroll 200s linear infinite;
   z-index: 0;
+  touch-action: none;
 }
 
-@keyframes starScroll {
-  from { background-position: 0 0; }
-  to { background-position: 0 -2000px; }
-}
-
-.star-wars-logo {
+/* Pulsante play musica */
+#playButton {
   position: absolute;
-  top: 30px;
-  width: 100%;
-  text-align: center;
-  font-size: 60px;
-  color: yellow;
-  z-index: 2;
-  text-shadow: 0 0 20px #ffe;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0 10px #ffd800;
+  display: none; /* nascosto finché autoplay funziona */
+  transition: background-color 0.3s ease;
 }
 
-.crawl {
+#playButton:hover {
+  background-color: #ffeb3b;
+}
+
+/* Crawl container */
+#crawlContainer {
   position: absolute;
   bottom: -100%;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Crawl testi */
+.crawlContent {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 1.5em;
-  color: yellow;
-  z-index: 2;
-  animation: crawlUp 300s linear infinite;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  animation: crawlUp 180s linear infinite;
 }
 
+/* Crawl animazione */
 @keyframes crawlUp {
-  from { bottom: -100%; }
-  to { bottom: 100%; }
-}
-
-#playMusic {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 3;
-  padding: 10px 20px;
-  background-color: yellow;
-  color: black;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
 }
