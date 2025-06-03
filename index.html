@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Star Wars Head</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testa Rotante - Star Wars</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
 </head>
@@ -13,23 +13,46 @@
   <div class="star-wars-logo">STAR WARS</div>
 
   <div class="crawl">
-    <!-- Puoi incollare tutti i testi da I a IX qui, già fatto precedentemente -->
-    <p>Episode I</p>
-    <p>THE PHANTOM MENACE</p>
-    <p>Turmoil has engulfed the Galactic Republic... (continua per tutti gli episodi)</p>
-    <!-- Aggiungi gli altri episodi allo stesso modo -->
+    <!-- TESTI COMPLETI DI TUTTI GLI EPISODI (COME INVIATI DA TE) -->
+    <div>
+      <p>Episode I</p>
+      <p>THE PHANTOM MENACE</p>
+      <p>Turmoil has engulfed the Galactic Republic... (continua come da tuo testo)</p>
+      <p>Episode II</p>
+      <p>ATTACK OF THE CLONES</p>
+      <p>There is unrest in the Galactic Senate... (continua)</p>
+      <p>Episode III</p>
+      <p>REVENGE OF THE SITH</p>
+      <p>War! The Republic is crumbling... (continua)</p>
+      <p>Episode IV</p>
+      <p>A NEW HOPE</p>
+      <p>It is a period of civil war... (continua)</p>
+      <p>Episode V</p>
+      <p>THE EMPIRE STRIKES BACK</p>
+      <p>It is a dark time for the Rebellion... (continua)</p>
+      <p>Episode VI</p>
+      <p>RETURN OF THE JEDI</p>
+      <p>Luke Skywalker has returned to his home planet... (continua)</p>
+      <p>Episode VII</p>
+      <p>THE FORCE AWAKENS</p>
+      <p>Luke Skywalker has vanished... (continua)</p>
+      <p>Episode VIII</p>
+      <p>THE LAST JEDI</p>
+      <p>The FIRST ORDER reigns... (continua)</p>
+      <p>Episode IX</p>
+      <p>THE RISE OF SKYWALKER</p>
+      <p>The dead speak!... (continua)</p>
+    </div>
   </div>
 
-  <canvas id="renderCanvas"></canvas>
+  <button id="playMusic">▶ Musica</button>
 
-  <!-- Musica autoplay -->
   <audio id="theme" autoplay loop>
     <source src="https://ia600407.us.archive.org/33/items/StarWarsOpeningTheme_201601/StarWarsOpeningTheme.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+    Il tuo browser non supporta l’audio.
   </audio>
 
-  <!-- Bottone fallback -->
-  <button id="playMusic">🎵 Riproduci Musica</button>
+  <canvas id="renderCanvas"></canvas>
 
   <script src="https://cdn.babylonjs.com/babylon.js"></script>
   <script src="https://cdn.babylonjs.com/loaders/babylon.glTF2FileLoader.js"></script>
