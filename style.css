@@ -1,0 +1,59 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  color: yellow;
+}
+
+#renderCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#starfield {
+  background: url('https://i.ibb.co/hfBtcP6/starfield.jpg') repeat;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  animation: starScroll 200s linear infinite;
+  z-index: 0;
+}
+
+@keyframes starScroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 -2000px; }
+}
+
+.star-wars-logo {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  color: yellow;
+  z-index: 2;
+  text-shadow: 0 0 20px #ffe;
+}
+
+.crawl {
+  position: absolute;
+  bottom: -500px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  color: yellow;
+  z-index: 2;
+  animation: crawlUp 60s linear infinite;
+}
+
+@keyframes crawlUp {
+  from { bottom: -500px; }
+  to { bottom: 100%; }
+}
